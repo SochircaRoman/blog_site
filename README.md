@@ -23,3 +23,8 @@
 }
 ```
 ## Example: https://ibb.co/tB91gTf
+
+## Custom endpoints
++ Find post by name
++ Find post by tags
++ Get all posts
