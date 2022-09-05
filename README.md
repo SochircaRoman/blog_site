@@ -10,16 +10,21 @@
   admin_root: boolean(optional)
 }
 ```
-## Post
+## UserPost
 ```
 {
   id: int(PK, autoincrement),
+  user_id: int(required, FK to user.id)
+}
+```
+## Post
+```
+{
   image: string(required, path to file),
   author: string(required, min: 5: max: 50),
   tags: string(required, min: 5: max: 50),
   title: string(required, min: 5: max: 150),
-  description: string(required, min: 100: max: 5000),
-  user_id: int(required, FK to user.id)
+  description: string(required, min: 100: max: 5000)
 }
 ```
 ## Example: https://ibb.co/tB91gTf
@@ -28,3 +33,7 @@
 + Find post by name
 + Find post by tags
 + Get all posts
++ Get all users
+
+## User authentification
+
