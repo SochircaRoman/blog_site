@@ -1,9 +1,13 @@
 import express from 'express'
+import mongoose from 'mongoose'
 
 const app = express()
 const port = 3000
 
-app.get('/', (request, response) => {
+app.use(express.json())
+
+app.post('/', (request, response) => {
+  console.log(request.body);
   response.status(200).json('Server runing...')
 })
 
