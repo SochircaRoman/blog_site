@@ -52,3 +52,12 @@
 ## User authentification
 + The users can be authenticated using username and password.
 + The users will have 2 groups: admin and simple users
+
+## Working with files
+Example: Every post entity will contain one image.
+
+Must be implemented the following functionalities>
++ Upload cover image
++ Delete cover image
+
+  
