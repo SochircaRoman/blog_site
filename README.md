@@ -50,4 +50,5 @@
 + Get post by title
 
 ## User authentification
-
++ The users can be authenticated using username and password.
++ The users will have 2 groups: admin and simple users
