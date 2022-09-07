@@ -5,29 +5,33 @@
 ## User
 ```
 {
-  id: int(PK, autoincrement),
-  name: string(required, min: 5: max: 50),
+  userId: int(PK, autoincrement),
+  username: string(required, min: 5: max: 50),
+  password: int(required, min: 5 max: 20),
   admin_root: boolean(optional)
-}
-```
-## UserPost
-```
-{
-  id: int(PK, autoincrement),
-  user_id: int(required, FK to user.id)
 }
 ```
 ## Post
 ```
 {
-  image: string(required, path to file),
-  author: string(required, min: 5: max: 50),
-  tags: string(required, min: 5: max: 50),
+  postId: int(PK, autoincrement),
   title: string(required, min: 5: max: 150),
-  description: string(required, min: 100: max: 5000)
+  description: string(required, min: 100: max: 5000),
+  author: string(required, min: 5: max: 50),
+  image: string(required, path to file),
+  userId: int(required, FK to userId)
 }
 ```
-## Example: https://ibb.co/tB91gTf
+## Tag
+```
+{
+  tagId: int(PK, autoincrement),
+  tag: string(required, min: 5: max: 50),
+  postId: int(required, FK to postId)
+  
+}
+```
+## Example: https://ibb.co/kqD8Bwc
 
 ## Custom endpoints
 + Find post by name
