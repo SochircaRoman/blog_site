@@ -39,5 +39,13 @@
 + Get all posts
 + Get all users
 
+## CRUD methods
++ Create a post
++ Get all posts
++ Get posts by tag
++ Get post by title
++ Update post
++ Delete post
+
 ## User authentification
 
