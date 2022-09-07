@@ -42,12 +42,12 @@
 ## CRUD methods
 + Create a post
 + Get all posts
-+ Get posts by tag
-+ Get post by title
 + Update post
 + Delete post
 
 ## Custom endpoints
++ Get posts by tag
++ Get post by title
 
 ## User authentification
 
