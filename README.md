@@ -47,5 +47,7 @@
 + Update post
 + Delete post
 
+## Custom endpoints
+
 ## User authentification
 
