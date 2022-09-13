@@ -1,5 +1,18 @@
 # Project name: Blog site
 
+# Project description:
+This is the back-end part of a blog site written in Express.js a framework of Node.js
+
+In this project are used MEVN stack:
+- Node/Express
+- MongoDB
+- VueJS
+
+Dependences:
+- Mongoose
+- Nodemon
+- Dotenv
+
 # Entities:
 
 ## User
@@ -28,7 +41,6 @@
   tagId: int(PK, autoincrement),
   tag: string(required, min: 5: max: 50),
   postId: int(required, FK to postId)
-  
 }
 ```
 ## Example: https://ibb.co/kqD8Bwc
@@ -59,5 +71,3 @@ Example: Every post entity will contain one image.
 Must be implemented the following functionalities>
 + Upload cover image
 + Delete cover image
-
-  
