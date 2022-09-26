@@ -1,11 +1,22 @@
-const express = require('express')
+import express from "express";
+import mongoose from "mongoose";
+import router from "./new/router.js";
+require('dotenv').config()
+
 const app = express()
-const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(express.json())
+app.use("/api", router)
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+const startApp = async () => {
+  try {
+    await mongoose.connect(process.env.DB_URL)
+    app.listen(process.env.SERVER_PORT, () => {
+      console.log(`Server started on port http://localhost:${process.env.SERVER_PORT}`)
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+startApp()

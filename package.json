@@ -2,10 +2,10 @@
   "name": "blog_site",
   "version": "1.0.0",
   "description": "A blog site using express.js",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
