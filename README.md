@@ -62,28 +62,42 @@ Dependences:
 ## Example: https://ibb.co/Svxpf5B
 
 ## Custom endpoints
-+ Find post by name
-+ Find post by tags
-+ Get all posts
-+ Get all users
++ Register user
++ Login User
++ Activate User account
++ Find user by id
++ Find post by userId
++ Find tags by userId
 
 ## CRUD methods
++ Get all users
++ Update user
++ Delete user
+
 + Create a post
 + Get all posts
 + Update post
 + Delete post
 
++ Create a tag
++ Get all tags
++ Update tag
++ Delete tag
+
 ## Custom endpoints
 + Get posts by tag
 + Get post by title
 
+## User registration
++ For register the users must enter username, password an email.
++ For succes registration the users must activate their account.
+
 ## User authentification
 + The users can be authenticated using username and password.
-+ The users will have 2 groups: admin and simple users
-
-## Working with files
-Example: Every post entity will contain one image.
++ The users will have 2 groups: admin and simple users.
++ Each user have an unique token for login
++ The simple users dont have permission for accesing private information (users info, update user, delete user, etc).
 
 Must be implemented the following functionalities>
-+ Upload cover image
-+ Delete cover image
++ Upload post image
++ Delete post image
