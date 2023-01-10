@@ -25,7 +25,9 @@ Dependences:
   username: string(required, unique, min: 5: max: 50),
   password: string(required, min: 5 max: 60),
   email: string(required, unique, min: 5 max: 50),
-  admin_root: boolean(default: false)
+  admin_root: boolean(default: false),
+  activationLink: string(default: null, min: 5 max: 60),
+  isActivated: boolean(default: false)
 }
 ```
 ## Post
@@ -57,7 +59,7 @@ Dependences:
   userId: int(required, FK to User)
 }
 ```
-## Example: https://ibb.co/9cvm0pS
+## Example: https://ibb.co/Svxpf5B
 
 ## Custom endpoints
 + Find post by name
