@@ -1,16 +1,15 @@
-import express from "express";
-import mongoose from "mongoose";
-import router from "./new/router.js";
+const express = require('express')
 require('dotenv').config()
-
+const mongoose = require("mongoose");
 const app = express()
+//const router = require("./api/routes/index");
 
 app.use(express.json())
-app.use("/api", router)
+//app.use('/', router);
 
 const startApp = async () => {
   try {
-    await mongoose.connect(process.env.DB_URL)
+    await mongoose.connect("mongodb+srv://user:user@cluster0.p4oeedo.mongodb.net/?retryWrites=true&w=majority")
     app.listen(process.env.SERVER_PORT, () => {
       console.log(`Server started on port http://localhost:${process.env.SERVER_PORT}`)
     })
@@ -19,4 +18,5 @@ const startApp = async () => {
   }
 }
 
+require('./database').init()
 startApp()
