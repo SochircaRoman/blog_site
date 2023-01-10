@@ -23,8 +23,9 @@ Dependences:
 {
   id: int(PK, autoincrement),
   username: string(required, unique, min: 5: max: 50),
-  password: int(required, min: 5 max: 20),
-  admin_root: boolean(optional)
+  password: string(required, min: 5 max: 60),
+  email: string(required, unique, min: 5 max: 50),
+  admin_root: boolean(default: false)
 }
 ```
 ## Post
@@ -35,7 +36,8 @@ Dependences:
   description: string(required, min: 100: max: 5000),
   author: string(required, min: 5: max: 50),
   image: string(required, path to file),
-  userId: int(required, FK to userId)
+  date: date(default: now_date),
+  userId: int(required, FK to User)
 }
 ```
 ## Tag
