@@ -57,7 +57,7 @@ Dependences:
   userId: int(required, FK to User)
 }
 ```
-## Example: https://ibb.co/kqD8Bwc
+## Example: https://ibb.co/9cvm0pS
 
 ## Custom endpoints
 + Find post by name
