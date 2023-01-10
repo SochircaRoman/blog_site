@@ -54,7 +54,7 @@ Dependences:
   id: int(PK, autoincrement),
   name: string(required, min: 5: max: 50),
   refreshToken: string(required, min: 5: max: 60),
-  userId: int(required, FK to Post)
+  userId: int(required, FK to User)
 }
 ```
 ## Example: https://ibb.co/kqD8Bwc
