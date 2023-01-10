@@ -73,12 +73,10 @@ Dependences:
 + Get all users
 + Update user
 + Delete user
-
 + Create a post
 + Get all posts
 + Update post
 + Delete post
-
 + Create a tag
 + Get all tags
 + Update tag
