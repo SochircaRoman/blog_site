@@ -82,10 +82,6 @@ Dependences:
 + Update tag
 + Delete tag
 
-## Custom endpoints
-+ Get posts by tag
-+ Get post by title
-
 ## User registration
 + For register the users must enter username, password an email.
 + For succes registration the users must activate their account.
