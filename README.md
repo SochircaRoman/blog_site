@@ -3,23 +3,26 @@
 # Project description:
 This is the back-end part of a blog site written in Express.js a framework of Node.js
 
-In this project are used MEVN stack:
+In this project are used:
 - Node/Express
-- MongoDB
-- VueJS
+- MySQL
 
 Dependences:
-- Mongoose
-- Nodemon
-- Dotenv
+- sequelize - ORM for MySQL
+- nodemon - for start project
+- bcryptjs - for created hashed passwords
+- dotenv - for storing configuration variables
+- jsonwebtoken - for tokens generation
+- uuid - for generation unique identifier
+- nodemailer - for email sending
 
 # Entities:
 
 ## User
 ```
 {
-  userId: int(PK, autoincrement),
-  username: string(required, min: 5: max: 50),
+  id: int(PK, autoincrement),
+  username: string(required, unique, min: 5: max: 50),
   password: int(required, min: 5 max: 20),
   admin_root: boolean(optional)
 }
@@ -27,7 +30,7 @@ Dependences:
 ## Post
 ```
 {
-  postId: int(PK, autoincrement),
+  id: int(PK, autoincrement),
   title: string(required, min: 5: max: 150),
   description: string(required, min: 100: max: 5000),
   author: string(required, min: 5: max: 50),
