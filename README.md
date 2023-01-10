@@ -43,9 +43,18 @@ Dependences:
 ## Tag
 ```
 {
-  tagId: int(PK, autoincrement),
-  tag: string(required, min: 5: max: 50),
-  postId: int(required, FK to postId)
+  id: int(PK, autoincrement),
+  name: string(required, min: 5: max: 50),
+  postId: int(required, FK to Post)
+}
+```
+## Token
+```
+{
+  id: int(PK, autoincrement),
+  name: string(required, min: 5: max: 50),
+  refreshToken: string(required, min: 5: max: 60),
+  userId: int(required, FK to Post)
 }
 ```
 ## Example: https://ibb.co/kqD8Bwc
